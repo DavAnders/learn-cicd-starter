@@ -30,3 +30,6 @@ jobs:
 
     - name: Build the app
       run: ./scripts/buildprod.sh
+
+    - name: Submit build to Cloud Build and push to Container Registry
+      run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-417017/notely-ar-repo/notely:latest .
